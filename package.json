@@ -1,0 +1,39 @@
+{
+  "name": "forest-server",
+  "version": "2.0.0",
+  "type": "module",
+  "main": "server-modular.js",
+  "bin": {
+    "forest-server": "server-modular.js"
+  },
+  "scripts": {
+    "start": "node server-modular.js",
+    "hta-demo": "node hta_demo.js",
+    "lint": "eslint . --ext .js --config .eslintrc.json",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "dev": "nodemon server-modular.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "debug": "^4.3.4",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-security": "^1.7.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3",
+    "pino": "^8.11.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.4.5"
+  }
+}
